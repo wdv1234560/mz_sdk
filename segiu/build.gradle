@@ -4,7 +4,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        minSdkVersion 17
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -124,9 +124,17 @@ dependencies {
 
     api rootProject.ext.dependencies["zxing-core"]
 
+    implementation rootProject.ext.dependencies["androidx_exifinterface"]
+    implementation rootProject.ext.dependencies["androidx_transition_version"]
+    implementation "androidx.concurrent:concurrent-futures:1.0.0"
+//    implementation "com.squareup.okio:okio:1.15.0"
+    implementation "androidx.camera:camera-lifecycle:1.0.0-beta03"
+    implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+    implementation "androidx.camera:camera-view:1.0.0-alpha10"
+    implementation "androidx.camera:camera-camera2:1.0.0-beta03"
 //    api project(path: ':arms')
 //    api project(path: ':zxing-android-embedded')
-    api project(path: ':picture_library')
+//    api project(path: ':picture_library')
 //    api(name: 'arms-debug', ext: 'aar')
 //    api(name: 'zxing-android-embedded-debug', ext: 'aar')
 //    api(name: 'picture_library-debug', ext: 'aar')
