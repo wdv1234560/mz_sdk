@@ -22,7 +22,7 @@
                 android:id="@+id/ll_search"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/h_search_title"
-                android:background="@color/white"
+                android:background="@color/mz_white"
                 android:orientation="horizontal"
                 android:visibility="gone">
 

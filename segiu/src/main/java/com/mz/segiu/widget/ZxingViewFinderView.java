@@ -54,17 +54,17 @@ public class ZxingViewFinderView extends ViewfinderView {
         // Get attributes on view
         TypedArray attributes = getContext().obtainStyledAttributes(attrs, R.styleable.ZxingViewFinderView);
         scannerBoundColor = attributes.getColor(R.styleable.ZxingViewFinderView_scannerBoundColor,
-                resources.getColor(R.color.white));
+                resources.getColor(R.color.mz_white));
         scannerBoundWidth = attributes.getDimension(R.styleable.ZxingViewFinderView_scannerBoundWidth, 0f);
         scannerBoundCornerColor = attributes.getColor(R.styleable.ZxingViewFinderView_scannerBoundCornerColor,
-                resources.getColor(R.color.colorPrimary));
+                resources.getColor(R.color.mz_colorPrimary));
         scannerBoundCornerWidth = attributes.getDimension(R.styleable.ZxingViewFinderView_scannerBoundCornerWith, 2f);
         scannerBoundCornerHeight = attributes.getDimension(R.styleable.ZxingViewFinderView_scannerBoundCornerHeight, 24f);
         scannerLaserResId = attributes.getResourceId(R.styleable.ZxingViewFinderView_scannerLaserResId, 0);
         scannerTipText = attributes.getString(R.styleable.ZxingViewFinderView_scannerTipText);
         scannerTipTextSize = attributes.getDimension(R.styleable.ZxingViewFinderView_scannerTipTextSize, 14f);
         scannerTipTextColor = attributes.getColor(R.styleable.ZxingViewFinderView_scannerTipTextColor,
-                resources.getColor(R.color.white));
+                resources.getColor(R.color.mz_white));
         scannerTipTextMargin = attributes.getDimension(R.styleable.ZxingViewFinderView_scannerTipTextMargin, 40f);
         tipTextGravityBottom = attributes.getBoolean(R.styleable.ZxingViewFinderView_scannerTipTextGravity, true);
         attributes.recycle();

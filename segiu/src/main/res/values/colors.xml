@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008c83</color>
-    <color name="colorPrimaryDark">#008c83</color>
-    <color name="colorAccent">#008c83</color>
-    <color name="white">#FFFFFF</color>
+    <color name="mz_colorPrimary">#008c83</color>
+    <color name="mz_colorPrimaryDark">#008c83</color>
+    <color name="mz_colorAccent">#008c83</color>
+    <color name="mz_white">#FFFFFF</color>
 
-    <color name="font_color_1">#4F566F</color>
-    <color name="c_666666">#666666</color>
-    <color name="c_999999">#999999</color>
-    <color name="font_color_2">#898FA7</color>
-    <color name="font_color_3">#63687F</color>
+    <color name="mz_font_1">#4F566F</color>
+    <color name="mz_666666">#666666</color>
+    <color name="mz_999999">#999999</color>
+    <color name="mz_font_2">#898FA7</color>
+    <color name="mz_font_3">#63687F</color>
     <color name="mz_red_eb5463">#EB5463</color>
     <color name="mz_orange_f29838">#F29838</color>
     <color name="mz_blue_2196F3">#2196F3</color>
+    <color name="mz_line_color">#e8e8e8</color>
+
+<!--  arms start  -->
+    <color name="errorColor">#D50000</color>
+    <color name="infoColor">#3F51B5</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+    <color name="normalColor">#353A3E</color>
+<!--  arms end  -->
     <!--  old-colors-start  -->
     <color name="uis_green">#008c83</color>
     <color name="ivory">#FFFFF0</color><!--象牙色 -->
@@ -125,6 +134,5 @@
     <color name="def_background">#f2f2f2</color>
     <color name="c_e8e8e8">#E8E8E8</color>
     <color name="font_blue_1">#1C7DCA</color>
-
     <!--  old-colors-end  -->
 </resources>
