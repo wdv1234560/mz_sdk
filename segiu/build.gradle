@@ -121,10 +121,11 @@ dependencies {
 
     //test
     api rootProject.ext.dependencies["timber"]
+
     api rootProject.ext.dependencies["zxing-core"]
 
 //    api project(path: ':arms')
-    api project(path: ':zxing-android-embedded')
+//    api project(path: ':zxing-android-embedded')
     api project(path: ':picture_library')
 //    api(name: 'arms-debug', ext: 'aar')
 //    api(name: 'zxing-android-embedded-debug', ext: 'aar')

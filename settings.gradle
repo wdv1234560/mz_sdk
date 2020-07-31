@@ -1,5 +1,6 @@
 rootProject.name='My Application'
-include ':app',':zxing-android-embedded', ':picture_library'
+include ':app' , ':picture_library'
+//,':zxing-android-embedded'
 //, ':arms'
 include ':segiu'
 //include ':lib_build_aar'

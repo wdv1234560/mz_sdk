@@ -29,7 +29,12 @@
             android:name=".mvp.ui.activity.MzWebActivity"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize" />
-
+        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <!--    在调用TBS初始化,设置开启优化方案-->
         <service
             android:name=".services.BluetoothLeService"
