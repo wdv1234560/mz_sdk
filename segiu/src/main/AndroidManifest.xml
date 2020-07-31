@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mz.segiu">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <application
+        >
+        <activity
+            android:name=".ble.DeviceListActivity"
+            android:theme="@style/MyDialog1"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mvp.ui.activity.ScanActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mvp.ui.activity.MzWebActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--    在调用TBS初始化,设置开启优化方案-->
+        <service
+            android:name=".services.BluetoothLeService"
+            android:enabled="true" />
+        <meta-data
+            android:name="com.mz.segiu.app.GlobalConfiguration"
+            android:value="ConfigModule" /> <!-- arms配置 -->
+    </application>
+</manifest>

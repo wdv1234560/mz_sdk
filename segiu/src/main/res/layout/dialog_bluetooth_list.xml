@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uis_green"
+        android:textColor="#ffffff"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:paddingTop="15sp"
+        android:paddingBottom="15sp"
+        android:text="@string/bluetooth_device_list"/>
+    <!--<TextView android:id="@+id/tvPairedDevices"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/title_paired_devices"-->
+    <!--android:visibility="gone"-->
+    <!--android:background="@color/black90"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--/>-->
+    <ListView android:id="@+id/lvPairedDevices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stackFromBottom="false"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="h_search_title">44dp</dimen>
+    <dimen name="h_title_bar">50dp</dimen>
+    <dimen name="h_44dp">44dp</dimen>
+
+</resources>

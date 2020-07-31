@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/zxing_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zxing_scanner_layout="@layout/layout_barcode_scanner">
+        <RelativeLayout
+            android:id="@+id/rl_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_search_title"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    style="@style/t_333_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/bg_et_search"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:hint="搜索"
+                    android:paddingLeft="15dp" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="18dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rb_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="85dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/sel_scan_code"
+                    android:text="二维码"
+                    android:textColor="@color/sel_scan_code" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/rb_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="85dp"
+                    android:button="@null"
+                    android:drawableTop="@drawable/sel_input_code"
+                    android:text="手动输入"
+                    android:textColor="@color/sel_scan_code" />
+            </RadioGroup>
+        </RelativeLayout>
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+
+</LinearLayout>
