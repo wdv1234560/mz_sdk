@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+version = "1.0.7"
+group='com.github.wdv1234560'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -114,6 +117,7 @@ dependencies {
     //tools
     compileOnly rootProject.ext.dependencies["javax.annotation"]
     api rootProject.ext.dependencies["dagger2"]
+    api rootProject.ext.dependencies["dagger2-android-support"]
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
     compileOnly rootProject.ext.dependencies["eventbus"]
     api rootProject.ext.dependencies["androideventbus"]

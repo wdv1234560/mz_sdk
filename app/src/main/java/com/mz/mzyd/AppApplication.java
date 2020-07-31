@@ -5,16 +5,17 @@ import android.content.Context;
 
 
 import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 
 import com.jess.arms.base.MzSDK;
 
 
-public class AppApplication extends Application {
+public class AppApplication extends MultiDexApplication {
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        MultiDex.install(base);
+//        MultiDex.install(base);
 
     }
 
