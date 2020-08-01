@@ -13,7 +13,7 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
+//        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     repositories {
@@ -31,14 +31,107 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies["multidex"]
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     implementation(name: 'segiu-debug', ext: 'aar')
 //    implementation(name: 'segiu-release', ext: 'aar')
-    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
 //    implementation(name: 'lib_build_aar-flavor2-debug', ext: 'aar')
-    implementation rootProject.ext.dependencies["appcompat"]
 //    implementation project(path: ':segiu')
+    implementation(rootProject.ext.dependencies["appcompat"]) {
+        exclude module: 'annotation'
+
+    }
+    compileOnly rootProject.ext.dependencies["design"]
+    implementation('androidx.constraintlayout:constraintlayout:1.1.3')
+    implementation(rootProject.ext.dependencies["recyclerview"]) {
+        exclude module: 'annotation'
+
+    }
+    implementation(rootProject.ext.dependencies["annotations"])
+
+    implementation(rootProject.ext.dependencies["lifecyclemodel"])
+    implementation(rootProject.ext.dependencies["androidx_lifecycle_extensions"])
+    implementation(rootProject.ext.dependencies["androidx_lifecycle_runtime"])
+    //view
+    implementation(rootProject.ext.dependencies["cachewebview"])
+    implementation(rootProject.ext.dependencies["luban"])
+    implementation(rootProject.ext.dependencies["x5-tbs"])
+    //rx
+    implementation(rootProject.ext.dependencies["rxjava2"]) {
+
+    }
+    implementation(rootProject.ext.dependencies["rxandroid2"]) {
+        exclude module: 'rxjava'
+
+    }
+    implementation(rootProject.ext.dependencies["rxlifecycle3"]) {
+        exclude module: 'rxjava'
+        exclude module: 'jsr305'
+
+    }
+    implementation(rootProject.ext.dependencies["rxlifecycle3-android"]) {
+        exclude module: 'annotation'
+        exclude module: 'rxjava'
+        exclude module: 'rxandroid'
+        exclude module: 'rxlifecycle'
+
+    }
+    implementation(rootProject.ext.dependencies["rxpermissions2"]) {
+        exclude module: 'rxjava'
+        exclude module: 'annotation'
+
+    }
+    implementation(rootProject.ext.dependencies['rxerrorhandler2'])
+
+    //network
+    implementation(rootProject.ext.dependencies["retrofit"]) {
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+
+    }
+    implementation(rootProject.ext.dependencies["retrofit-converter-gson"]) {
+        exclude module: 'gson'
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+        exclude module: 'retrofit'
+
+    }
+    implementation(rootProject.ext.dependencies["retrofit-adapter-rxjava2"]) {
+        exclude module: 'rxjava'
+        exclude module: 'okhttp'
+        exclude module: 'retrofit'
+        exclude module: 'okio'
+
+    }
+    implementation(rootProject.ext.dependencies["retrofit-url-manager"])
+    implementation(rootProject.ext.dependencies["okhttp3"])
+    implementation(rootProject.ext.dependencies["glide"])
+    annotationProcessor(rootProject.ext.dependencies["glide-compiler"]) {
+        exclude module: 'jsr305'
+    }
+
+    //tools
+    compileOnly rootProject.ext.dependencies["javax.annotation"]
+    implementation(rootProject.ext.dependencies["dagger2"])
+    implementation(rootProject.ext.dependencies["dagger2-android-support"])
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    compileOnly rootProject.ext.dependencies["eventbus"]
+    implementation(rootProject.ext.dependencies["androideventbus"])
+    implementation(rootProject.ext.dependencies["gson"])
+
+    //test
+    implementation(rootProject.ext.dependencies["timber"])
+
+    implementation(rootProject.ext.dependencies["zxing-core"])
+
+    implementation(rootProject.ext.dependencies["androidx_exifinterface"])
+    implementation(rootProject.ext.dependencies["androidx_transition_version"])
+    implementation("androidx.concurrent:concurrent-futures:1.0.0")
+//    implementation "com.squareup.okio:okio:1.15.0"
+    implementation("androidx.camera:camera-lifecycle:1.0.0-beta03")
+    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.0.0")
+    implementation("androidx.camera:camera-view:1.0.0-alpha10")
+    implementation("androidx.camera:camera-camera2:1.0.0-beta03")
 }
